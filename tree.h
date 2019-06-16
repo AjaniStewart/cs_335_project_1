@@ -12,8 +12,7 @@
                    latitude and longitude were incorrect. They were corrected.
  
 *******************************************************************************/
-#ifndef __Tree_H__
-#define __Tree_H__
+#pragma once
 
 /******************************************************************************
 Data Dictionary for Input File:
@@ -124,6 +123,12 @@ public:
      */
     friend bool islessname(const Tree & t1, const Tree & t2);
 
+
+    //compares two tree species case insenitively
+    //space and hyphen are treated as the same character
+    // returns 0 if trees are same, 1 if *this is bigger, -1 if *this is smaller
+    friend int compare_trees( const Tree& t1, const Tree& t2);
+
     /** A bunch of get-functions
      *  The next nine methods are accessor functions that retrieve the value
      *  of the corresponding private data member. Their meaning should be
@@ -142,7 +147,7 @@ public:
 
 
 private:
-    int    tree_id = -1;    // unique id that  identifies the tree
+    int    tree_id = -0;    // unique id that  identifies the tree
     int    tree_dbh = -1;   // specifies tree diameter
     string status = "";     // valid values: ”Alive”, ”Dead”, ”Stump”, or the 
                        //        empty string 
@@ -170,7 +175,5 @@ private:
     int compare_trees( const Tree& t) const;
                        
 };
-
-#endif /* __Tree_H__ */
 
 

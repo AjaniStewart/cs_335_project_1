@@ -53,6 +53,14 @@ public:
   std::list<std::string> get_all_near( double latitude, double longitude, double distance ) const;
 
 private:
+  // class Tree_AVL : public AvlTree<Tree> {
+  // public:
+  //   std::list<std::string> find_all_species( const std::string& spc_name ) const;
+
+  // private:
+  //   std::list<std::string> find_all_species( const std::string& spc_name, AvlNode *t) const;
+
+  // };
   AvlTree<Tree> trees;
   TreeSpecies tree_species;
   // std::unordered_map<std::string, int> species_map;
@@ -68,6 +76,7 @@ private:
   };
 
   size_t size = 0;
+
 
 };
 

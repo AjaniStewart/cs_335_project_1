@@ -29,6 +29,7 @@ int TreeSpecies::number_of_species() const { return species.size(); }
 int TreeSpecies::add_species( const std::string& s ) {
   auto it = std::find(species.begin(), species.end(), s);
   if (it == species.end()) {
+    // std::cout << "adding " << s << "\n";
     species.push_back(s);
     std::sort( species.begin(), species.end() );
     return 1;
@@ -143,18 +144,6 @@ std::list<std::string> TreeSpecies::get_matching_species( const std::string& par
       list.push_back(s);
   });
   return list;
-}
-
-std::vector<std::string>::iterator TreeSpecies::begin() {
-  return species.begin();
-}
-
-std::vector<std::string>::iterator TreeSpecies::end() {
-  return species.end();
-}
-
-std::string& TreeSpecies::operator[](int index) {
-  return species[index];
 }
 
 bool TreeSpecies::contains( const std::string& s ) {

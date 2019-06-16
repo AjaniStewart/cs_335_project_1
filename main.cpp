@@ -207,7 +207,7 @@ int main( int argc, char* argv[])
                     // Print NYC total first, then print by boro
                     double percentage;
                     int   total_in_city = NYCTrees.total_tree_count();
-                    percentage = total_in_city > 0? (double) 100.00 *total / total_in_city:0;
+                    percentage = total_in_city > 0 ? (double) 100.00 * total / total_in_city : 0;
                     cout << "\t" 
                          << left << setw(15) << "New York City" 
                          << right << setw(12) << total 
@@ -218,8 +218,8 @@ int main( int argc, char* argv[])
 
                     for ( int i = 0; i < 5; i++ ) {
                         int boro_total = NYCTrees.count_of_trees_in_boro(boro_name[i]);
-                        percentage = boro_total > 0? 
-                                 (double) 100.00 * tree_counts_by_borough[i].count / boro_total:0;
+                        percentage = boro_total > 0 ? 
+                                 (double) 100.00 * tree_counts_by_borough[i].count / boro_total : 0;
                         cout << "\t" 
                              << left << setw(15) << boro_name[i]
                              << right << setw(12) << tree_counts_by_borough[i].count 

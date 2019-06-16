@@ -11,9 +11,7 @@
  
 *******************************************************************************/
 
-
-#ifndef ___Tree_Collection_H__
-#define ___Tree_Collection_H__
+#pragma once
 
 #include <string>
 #include <iostream>
@@ -152,7 +150,4 @@ public:
                          double  distance) const = 0;
 
 };
-
-
-#endif /* ___Tree_Collection_H__ */
 

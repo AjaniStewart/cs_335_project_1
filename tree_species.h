@@ -9,8 +9,7 @@
   Build with     : 
 *******************************************************************************/
 
-#ifndef TREE_SPECIES_H
-#define TREE_SPECIES_H
+#pragma once
 
 #include <vector>
 #include <string>
@@ -30,16 +29,10 @@ public:
 
   std::list<std::string> get_matching_species( const std::string& partial_name ) const;
 
-  std::vector<std::string>::iterator begin();
-
-  std::vector<std::string>::iterator end();
-
-  std::string& operator[](int index);
-
   bool contains( const std::string& s);
 
 private:
   std::vector<std::string> species;
 };
 
-#endif //TREE_SPECIES_H
+bool is_matching_species( const std::string& spc_name, const std::string& partial_name );
